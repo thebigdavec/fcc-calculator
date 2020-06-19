@@ -16,6 +16,10 @@ class App extends Component {
         {id: 'subtract', symbol: '-', operator: this.subtract()},
         {id: 'multiply', symbol: 'x', operator: this.multiply()},
         {id: 'divide', symbol: '÷', operator: this.divide()}
+      ],
+      commitButtons: [
+        {id: 'equals', symbol: '=', operator: this.calculate()},
+        {id: 'clear', symbol: 'C', operator: this.clear()}
       ]
     }
   }
@@ -31,6 +35,12 @@ class App extends Component {
   }
   divide() {
     return 'Divide';
+  }
+  calculate() {
+    return 'Calculate';
+  }
+  clear() {
+    return 'Clear';
   }
 
   render(){
