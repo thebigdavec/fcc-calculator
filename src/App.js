@@ -7,9 +7,32 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: '0'
+      display: '0',
+      digitButtons: [
+        'zero','one','two','three','four','five','six','seven','eight','nine'
+      ],
+      operatorButtons: [
+        {id: 'add', symbol: '+', operator: this.add()},
+        {id: 'subtract', symbol: '-', operator: this.subtract()},
+        {id: 'multiply', symbol: 'x', operator: this.multiply()},
+        {id: 'divide', symbol: '÷', operator: this.divide()}
+      ]
     }
   }
+
+  add() {
+    return 'Add';
+  }
+  subtract() {
+    return 'Subtract';
+  }
+  multiply() {
+    return 'Multiply';
+  }
+  divide() {
+    return 'Divide';
+  }
+
   render(){
   return (
     <div className="App">
